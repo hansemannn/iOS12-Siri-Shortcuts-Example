@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  SiriShortcuts
+//  MagazineViewer
 //
-//  Created by Hans Knöchel on 04.06.18.
+//  Created by Hans Knöchel on 06.06.18.
 //  Copyright © 2018 Hans Knöchel. All rights reserved.
 //
 

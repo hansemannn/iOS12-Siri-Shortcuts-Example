@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hIz-uG-ED1">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="c1V-Fi-qcz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hIz-uG-ED1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="5vY-Gd-3gM">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2Xl-CS-mZ0" kind="relationship" relationship="rootViewController" id="3Cc-YS-TEE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="juv-ny-NvQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="165.59999999999999" y="-564.46776611694156"/>
+        </scene>
+        <!--My Magazines-->
+        <scene sceneID="ShY-Kb-bsm">
+            <objects>
+                <tableViewController id="2Xl-CS-mZ0" customClass="MagazinesTableViewController" customModule="MagazineViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3Pf-AX-OAU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MagazineCell" rowHeight="130" id="dqN-ai-iD7" customClass="MagazineTableViewCell" customModule="MagazineViewer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="130"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dqN-ai-iD7" id="qem-0i-z5l">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="129.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6IA-rk-e9J">
+                                            <rect key="frame" x="34" y="11" width="70" height="106"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="70" id="o5d-Ta-vBW"/>
+                                                <constraint firstAttribute="height" constant="106" id="oVS-VB-MJI"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Harry Potter And The Cursed Child" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTO-aI-mEj">
+                                            <rect key="frame" x="139" y="11" width="185" height="42.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="55" id="tGU-bc-3cy"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Viewed: 2018/07/06" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEl-8Q-AuB">
+                                            <rect key="frame" x="139" y="56" width="185" height="18"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                            <color key="textColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="tTO-aI-mEj" firstAttribute="leading" secondItem="6IA-rk-e9J" secondAttribute="trailing" constant="35" id="6RH-Hs-fFq"/>
+                                        <constraint firstItem="KEl-8Q-AuB" firstAttribute="top" secondItem="tTO-aI-mEj" secondAttribute="bottom" constant="2.5" id="GDP-bm-Hou"/>
+                                        <constraint firstItem="6IA-rk-e9J" firstAttribute="top" secondItem="qem-0i-z5l" secondAttribute="top" constant="11" id="KWo-ny-QjO"/>
+                                        <constraint firstAttribute="trailing" secondItem="KEl-8Q-AuB" secondAttribute="trailing" constant="17" id="NRR-MA-ZZ3"/>
+                                        <constraint firstItem="KEl-8Q-AuB" firstAttribute="leading" secondItem="6IA-rk-e9J" secondAttribute="trailing" constant="35" id="R4Z-0u-Rf1"/>
+                                        <constraint firstAttribute="trailing" secondItem="tTO-aI-mEj" secondAttribute="trailing" constant="17" id="hbx-Uw-geP"/>
+                                        <constraint firstItem="tTO-aI-mEj" firstAttribute="top" secondItem="qem-0i-z5l" secondAttribute="top" constant="11" id="k95-Dx-opb"/>
+                                        <constraint firstItem="6IA-rk-e9J" firstAttribute="leading" secondItem="qem-0i-z5l" secondAttribute="leading" constant="34" id="mbt-fd-nuj"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bookTitleLabel" destination="tTO-aI-mEj" id="TMJ-dM-OlR"/>
+                                    <outlet property="coverImageView" destination="6IA-rk-e9J" id="SSz-pw-siC"/>
+                                    <outlet property="lastViewedLabel" destination="KEl-8Q-AuB" id="AGC-Sq-g4v"/>
+                                    <segue destination="0dB-wy-w4Y" kind="show" identifier="ShowDetailMagazine" id="xzS-vs-d4W"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="2Xl-CS-mZ0" id="1hI-93-UDI"/>
+                            <outlet property="delegate" destination="2Xl-CS-mZ0" id="TBT-ch-j68"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="My Magazines" id="Qdr-Zb-j82"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4mg-St-bzs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="869.60000000000002" y="-564.46776611694156"/>
+        </scene>
+        <!--Details-->
+        <scene sceneID="Qg6-4V-VmB">
+            <objects>
+                <viewController id="0dB-wy-w4Y" customClass="MagazineDetailsViewController" customModule="MagazineViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L0G-r1-JRV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AOP-4b-oWQ">
+                                <rect key="frame" x="87.5" y="155" width="200" height="302"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="6j3-sh-bl9"/>
+                                    <constraint firstAttribute="height" constant="302" id="wIG-v1-1C3"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{{Magazine.title}}" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRC-at-Eip">
+                                <rect key="frame" x="125" y="485" width="125" height="20"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BRC-at-Eip" firstAttribute="centerX" secondItem="Sb6-6d-iFc" secondAttribute="centerX" id="9F5-oa-bTp"/>
+                            <constraint firstItem="AOP-4b-oWQ" firstAttribute="centerX" secondItem="Sb6-6d-iFc" secondAttribute="centerX" id="Lx5-Dc-Bbx"/>
+                            <constraint firstItem="BRC-at-Eip" firstAttribute="top" secondItem="AOP-4b-oWQ" secondAttribute="bottom" constant="28" id="XuH-ys-QHb"/>
+                            <constraint firstItem="AOP-4b-oWQ" firstAttribute="top" secondItem="Sb6-6d-iFc" secondAttribute="top" constant="39" id="qsw-9H-5x7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Sb6-6d-iFc"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Details" id="mnX-93-GHd"/>
+                    <connections>
+                        <outlet property="coverImageView" destination="AOP-4b-oWQ" id="g97-CB-Wtg"/>
+                        <outlet property="titleLabel" destination="BRC-at-Eip" id="mci-qf-BJe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nFV-9S-fOt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1596" y="-564"/>
+        </scene>
+    </scenes>
+</document>
