@@ -117,13 +117,34 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="glb-kf-Buu">
+                                <rect key="frame" x="97" y="527" width="181" height="41"/>
+                                <color key="backgroundColor" red="0.21960784310000001" green="0.62745098040000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="VEP-iL-RsA"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="181" id="a5D-Ov-lHJ"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Read this Book"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="readBookButtonTapped:" destination="0dB-wy-w4Y" eventType="touchUpInside" id="yyp-9E-jcX"/>
+                                    <segue destination="XbC-yb-eRa" kind="presentation" id="UeE-uh-pfg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="BRC-at-Eip" firstAttribute="centerX" secondItem="Sb6-6d-iFc" secondAttribute="centerX" id="9F5-oa-bTp"/>
                             <constraint firstItem="AOP-4b-oWQ" firstAttribute="centerX" secondItem="Sb6-6d-iFc" secondAttribute="centerX" id="Lx5-Dc-Bbx"/>
                             <constraint firstItem="BRC-at-Eip" firstAttribute="top" secondItem="AOP-4b-oWQ" secondAttribute="bottom" constant="28" id="XuH-ys-QHb"/>
+                            <constraint firstItem="glb-kf-Buu" firstAttribute="centerX" secondItem="Sb6-6d-iFc" secondAttribute="centerX" id="kiT-CC-ztI"/>
                             <constraint firstItem="AOP-4b-oWQ" firstAttribute="top" secondItem="Sb6-6d-iFc" secondAttribute="top" constant="39" id="qsw-9H-5x7"/>
+                            <constraint firstItem="glb-kf-Buu" firstAttribute="top" secondItem="BRC-at-Eip" secondAttribute="bottom" constant="22" id="ufU-r0-oZu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Sb6-6d-iFc"/>
                     </view>
@@ -135,7 +156,60 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nFV-9S-fOt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1596" y="-564"/>
+            <point key="canvasLocation" x="1596" y="-564.46776611694156"/>
+        </scene>
+        <!--Read-->
+        <scene sceneID="zQO-b6-1mA">
+            <objects>
+                <viewController id="Xrh-uW-P5h" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pby-8x-WRI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No magic here so far" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhj-72-EJv">
+                                <rect key="frame" x="108" y="355" width="159" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vhj-72-EJv" firstAttribute="centerX" secondItem="Yo6-ac-YfO" secondAttribute="centerX" id="dEm-wY-9vu"/>
+                            <constraint firstItem="vhj-72-EJv" firstAttribute="centerY" secondItem="Yo6-ac-YfO" secondAttribute="centerY" id="lbi-aq-Zbr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Yo6-ac-YfO"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Read" id="KhW-HK-AbD">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="O0e-qb-g1s">
+                            <connections>
+                                <segue destination="Prc-Bm-5KC" kind="unwind" unwindAction="unwindToMagazineDetailsWithSender:" id="dzE-FB-DKY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SEH-zU-sFX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Prc-Bm-5KC" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3048.8000000000002" y="-564.46776611694156"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QXt-OR-6fd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XbC-yb-eRa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YGs-3H-Vgh">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Xrh-uW-P5h" kind="relationship" relationship="rootViewController" id="1hZ-gX-91T"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kne-x4-TKQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2321" y="-564"/>
         </scene>
     </scenes>
 </document>

@@ -8,12 +8,12 @@
 
 import UIKit
 
-enum MagazineSegue : String {
-  case detail = "ShowDetailMagazine"
-}
-
 class MagazinesTableViewController: UITableViewController {
-  
+    
+  public enum MagazineSegues : String {
+    case detail = "ShowDetailMagazine"
+  }
+
   private var magazines: [Magazine] = []
   
   override func viewDidLoad() {
@@ -23,7 +23,7 @@ class MagazinesTableViewController: UITableViewController {
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    guard segue.identifier == MagazineSegue.detail.rawValue, let destination = segue.destination as? MagazineDetailsViewController else {
+    guard segue.identifier == MagazineSegues.detail.rawValue, let destination = segue.destination as? MagazineDetailsViewController else {
       return
     }
     
@@ -53,18 +53,6 @@ extension MagazinesTableViewController {
     cell.configure(with: self.magazines[indexPath.row])
   
     return cell
-  }
-  
-  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    guard let cell = tableView.cellForRow(at: indexPath) as? MagazineTableViewCell else {
-      fatalError("Could not receive magazine cell")
-    }
-    
-    guard let magazine = cell.magazine else {
-      fatalError("Could not receive magazine model")
-    }
-    
-    print(magazine)
   }
   
   override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

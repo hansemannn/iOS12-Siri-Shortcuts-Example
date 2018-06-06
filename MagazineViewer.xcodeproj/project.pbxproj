@@ -101,7 +101,7 @@
 		DB9ED2F120C82DF3008B8018 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				DB9ED2F820C83370008B8018 /* Delegate */,
+				DB9ED2F820C83370008B8018 /* AppDelegate */,
 				DB9ED2F920C83378008B8018 /* Controller */,
 				DB9ED2FB20C8391F008B8018 /* Extensions */,
 				DB9ED2FA20C8337F008B8018 /* Model */,
@@ -109,12 +109,12 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
-		DB9ED2F820C83370008B8018 /* Delegate */ = {
+		DB9ED2F820C83370008B8018 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
 				DB9ED2D720C82BEB008B8018 /* AppDelegate.swift */,
 			);
-			name = Delegate;
+			name = AppDelegate;
 			sourceTree = "<group>";
 		};
 		DB9ED2F920C83378008B8018 /* Controller */ = {

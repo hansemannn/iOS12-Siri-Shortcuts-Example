@@ -22,3 +22,16 @@ public struct Magazine: Codable {
     self.lastViewed = lastViewed
   }
 }
+
+// MARK: View Magazine Intent
+
+extension Magazine {
+
+  public var intent: ViewMagazineIntent {
+    let viewMagazineIntent = ViewMagazineIntent()
+    viewMagazineIntent.name = self.title
+    viewMagazineIntent.suggestedInvocationPhrase = "Try this soup!"
+    
+    return viewMagazineIntent
+  }
+}
