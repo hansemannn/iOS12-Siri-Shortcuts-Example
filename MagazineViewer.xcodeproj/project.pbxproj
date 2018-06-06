@@ -17,6 +17,8 @@
 		DB9ED2F320C82E15008B8018 /* MagazineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9ED2F220C82E15008B8018 /* MagazineTableViewCell.swift */; };
 		DB9ED2F520C82F7E008B8018 /* Magazine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9ED2F420C82F7E008B8018 /* Magazine.swift */; };
 		DB9ED2F720C83368008B8018 /* MagazineDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9ED2F620C83368008B8018 /* MagazineDetailsViewController.swift */; };
+		DB9ED2FD20C83938008B8018 /* NSUserActivity+Magazines.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9ED2FC20C83938008B8018 /* NSUserActivity+Magazines.swift */; };
+		DB9ED2FF20C83BE7008B8018 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = DB9ED2FE20C83BE7008B8018 /* Intents.intentdefinition */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		DB9ED2F220C82E15008B8018 /* MagazineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineTableViewCell.swift; sourceTree = "<group>"; };
 		DB9ED2F420C82F7E008B8018 /* Magazine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magazine.swift; sourceTree = "<group>"; };
 		DB9ED2F620C83368008B8018 /* MagazineDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineDetailsViewController.swift; sourceTree = "<group>"; };
+		DB9ED2FC20C83938008B8018 /* NSUserActivity+Magazines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSUserActivity+Magazines.swift"; sourceTree = "<group>"; };
+		DB9ED2FE20C83BE7008B8018 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 		DB9ED2F020C82DE6008B8018 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DB9ED2FE20C83BE7008B8018 /* Intents.intentdefinition */,
 				DB9ED2DB20C82BEB008B8018 /* Main.storyboard */,
 				DB9ED2E020C82BEC008B8018 /* LaunchScreen.storyboard */,
 				DB9ED2DE20C82BEC008B8018 /* Assets.xcassets */,
@@ -98,6 +103,7 @@
 			children = (
 				DB9ED2F820C83370008B8018 /* Delegate */,
 				DB9ED2F920C83378008B8018 /* Controller */,
+				DB9ED2FB20C8391F008B8018 /* Extensions */,
 				DB9ED2FA20C8337F008B8018 /* Model */,
 			);
 			name = Classes;
@@ -127,6 +133,14 @@
 				DB9ED2F420C82F7E008B8018 /* Magazine.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		DB9ED2FB20C8391F008B8018 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DB9ED2FC20C83938008B8018 /* NSUserActivity+Magazines.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,10 +214,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB9ED2FF20C83BE7008B8018 /* Intents.intentdefinition in Sources */,
 				DB9ED2F320C82E15008B8018 /* MagazineTableViewCell.swift in Sources */,
 				DB9ED2F520C82F7E008B8018 /* Magazine.swift in Sources */,
 				DB9ED2D820C82BEB008B8018 /* AppDelegate.swift in Sources */,
 				DB9ED2F720C83368008B8018 /* MagazineDetailsViewController.swift in Sources */,
+				DB9ED2FD20C83938008B8018 /* NSUserActivity+Magazines.swift in Sources */,
 				DB9ED2EF20C82DDC008B8018 /* MagazinesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

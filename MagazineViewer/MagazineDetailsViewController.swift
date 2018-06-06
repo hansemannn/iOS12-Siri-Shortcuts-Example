@@ -27,6 +27,8 @@ class MagazineDetailsViewController: UIViewController {
     
     self.coverImageView.image = UIImage(named: magazine.cover)
     self.titleLabel.text = magazine.title
+    
+    self.userActivity = NSUserActivity.viewMagazineActivity
   }
 }
 
