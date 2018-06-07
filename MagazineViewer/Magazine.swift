@@ -7,16 +7,20 @@
 //
 
 import Foundation
+import Intents
 
 public struct Magazine: Codable {
 
+  public let identifier: String
+
   public let cover: String
-  
+
   public let title: String
   
   public let lastViewed: Date
   
-  public init(cover: String, title: String, lastViewed: Date) {
+  public init(identifier: String, cover: String, title: String, lastViewed: Date) {
+    self.identifier = identifier
     self.cover = cover
     self.title = title
     self.lastViewed = lastViewed
@@ -29,7 +33,7 @@ extension Magazine {
 
   public var intent: ViewMagazineIntent {
     let viewMagazineIntent = ViewMagazineIntent()
-    viewMagazineIntent.name = self.title
+    viewMagazineIntent.magazine = INObject(identifier: identifier, display: title)
     viewMagazineIntent.suggestedInvocationPhrase = "Try this soup!"
     
     return viewMagazineIntent

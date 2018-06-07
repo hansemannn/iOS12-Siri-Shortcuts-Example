@@ -22,12 +22,12 @@
 			<key>INIntentDescriptionID</key>
 			<string>lMPqkv</string>
 			<key>INIntentLastParameterTag</key>
-			<integer>1</integer>
+			<integer>2</integer>
 			<key>INIntentName</key>
 			<string>ViewMagazine</string>
 			<key>INIntentParameterCombinations</key>
 			<dict>
-				<key>name</key>
+				<key>magazine</key>
 				<dict>
 					<key>INIntentParameterCombinationIsPrimary</key>
 					<true/>
@@ -38,7 +38,7 @@
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<false/>
 					<key>INIntentParameterCombinationTitle</key>
-					<string>View ${name}</string>
+					<string>View ${magazine}</string>
 					<key>INIntentParameterCombinationTitleID</key>
 					<string>Bv332a</string>
 				</dict>
@@ -49,13 +49,13 @@
 					<key>INIntentParameterDisplayPriority</key>
 					<integer>1</integer>
 					<key>INIntentParameterName</key>
-					<string>name</string>
+					<string>magazine</string>
 					<key>INIntentParameterSupportsMultipleValues</key>
 					<false/>
 					<key>INIntentParameterTag</key>
-					<integer>1</integer>
+					<integer>2</integer>
 					<key>INIntentParameterType</key>
-					<string>String</string>
+					<string>Object</string>
 				</dict>
 			</array>
 			<key>INIntentResponse</key>

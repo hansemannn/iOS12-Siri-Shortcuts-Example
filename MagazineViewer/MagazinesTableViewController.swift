@@ -19,7 +19,10 @@ class MagazinesTableViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    self.magazines.append(Magazine(cover: "1-harry_potter", title: "Harry Potter And The Cursed Child", lastViewed: Date()))
+    self.magazines.append(Magazine(identifier: "harry_potter",
+                                   cover: "1-harry_potter",
+                                   title: "Harry Potter And The Cursed Child",
+                                   lastViewed: Date()))
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
